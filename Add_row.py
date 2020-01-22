@@ -7,7 +7,9 @@ def add_user(conn, full_name, total_points=0, num_of_events=0):
               VALUES(?,?,?) '''
     cur = conn.cursor()
     cur.execute(sql, (full_name, total_points, num_of_events))
-    return cur.lastrowid
+    conn.commit()
+    cur.close()
+    return 'Success'
 
 
 def add_location(conn, name, days_since_last_event=-1, votes=0):
@@ -15,17 +17,19 @@ def add_location(conn, name, days_since_last_event=-1, votes=0):
               VALUES(?,?,?) '''
     cur = conn.cursor()
     cur.execute(sql, (name, days_since_last_event, votes))
-    return cur.lastrowid
+    conn.commit()
+    cur.close()
+    return 'Success'
 
 
 def add_events(conn, location_id, date, total_num_of_bags=0, num_of_participants=0):
     sql = ''' INSERT INTO events(location_id, date, total_num_of_bags, num_of_participants)
-              VALUES(?,?,?) '''
+              VALUES(?, ?, ?, ?) '''
     cur = conn.cursor()
     cur.execute(sql, (location_id, date, total_num_of_bags, num_of_participants))
     conn.commit()
     cur.close()
-    return cur.lastrowid
+    return 'Success'
 
 
 def add_user_at_event(conn, user_id, event_id, points=0):
@@ -38,7 +42,7 @@ def add_user_at_event(conn, user_id, event_id, points=0):
                     WHERE id={event_id}''')
     conn.commit()
     cur.close()
-    return cur.lastrowid
+    return 'Success'
 
 
 def create_connection(db_file):
@@ -54,9 +58,7 @@ def main():
     database = r"Litterboard.db"
     conn = create_connection(database)
     with conn:
-        # user = ('Yona', '12', '1')
-        # project_id = add_user(conn, user)
-        user_event = add_user_at_event(conn, 1, 1)
+        # user_event = add_events(conn, 1, 1582976800)
 
 
 if __name__ == '__main__':
