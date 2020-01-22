@@ -12,21 +12,25 @@ place_app = Blueprint('Maps_insert', __name__)
 locator = geopy.Nominatim(user_agent='myGeocoder')
 
 with sqlite3.connect(DB_FILENAME) as con:
-    df_place = pd.read_sql('''SELECT name as Name
-                    FROM locations''', con)
+    df_place = pd.read_sql('''SELECT e.id , l.name as Name , e.total_num_of_bags as Total
+                            FROM locations as l, events as e
+                            WHERE l.id = e.location_id
+                            ORDER by e.id''', con)
+
 
 class Place:
-    def __init__(self, key, name):
+    def __init__(self, key, name, point):
         self.key = key
         self.name = name
         self.lat = locator.geocode(self.name).latitude
         self.lng = locator.geocode(self.name).longitude
+        self.point = point
 
 
 places = ()
-for i in df_place.Name:
+for i, j in zip(df_place.Name, df_place.Total):
     try:
-        places = places + (Place(i[:3].lower(), i+', Tel Aviv, Israel'),)
+        places = places + (Place(i[:3].lower(), i + ', Tel Aviv, Israel', int(j)),)
     except:
         pass
 places_by_key = {place.key: place for place in places}

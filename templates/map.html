@@ -9,20 +9,25 @@
         crossorigin="anonymous">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization"></script>
     <script type="text/javascript">
-    function initMap() {
-        var heatmapData = [
-          {location: new google.maps.LatLng({{place.lat}}, {{place.lng}}), weight: 50},
-          new google.maps.LatLng({{place.lat}}, {{place.lng}})
-        ];
+        function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: {{place.lat}}, lng: {{place.lng}}},
             zoom: 16
          });
-         var heatmap = new google.maps.visualization.HeatmapLayer({
-          data: heatmapData
-         });
+        heatmap = new google.maps.visualization.HeatmapLayer({
+              data: getPoints(),
+              map: map
+            });
          heatmap.setMap(map);
     }
+    function getPoints() {
+        var lotsOfMarkers = [];
+        for( var i = 1; i <= {{place.point}}; i++) {
+            var random = new google.maps.LatLng( {{place.lat}}+Math.random()*0.0001, {{place.lng}}+Math.random()*0.0001 );
+            lotsOfMarkers.push(random);
+    }
+    return lotsOfMarkers;
+  }
     </script>
 </head>
 <body onload="initMap()">
