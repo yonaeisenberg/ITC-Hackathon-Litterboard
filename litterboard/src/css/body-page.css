@@ -1,0 +1,133 @@
+html,
+body {
+min-height: 100vh;
+width:100%;
+position: relative;
+color:black;
+background-color:white;
+font-family: 'IBM Plex Mono', monospace;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items:space;
+    padding:0px;
+    color:black;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,255,24,1) 0%, rgba(37,203,215,1) 90% );    text-decoration: none;
+    z-index:1020 ;
+    overflow: hidden;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+  
+}
+
+header a{
+    text-decoration: none;
+    margin:0px 0px;
+    color:black;
+    font-weight:bold;
+    font-size: large;
+}
+header .logo{
+    height:70px;
+}
+
+
+
+.hamburger {
+    display: none;
+  }
+
+@media screen and (max-width: 709px) {
+    
+    .hamburger div {
+        width: 20px;
+        height: 4px;
+        background: black;
+        margin: 2px;
+    }
+    .hamburger {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        margin: 5px;
+        padding: 9px;
+        border-radius: 5px;
+    }
+    .nav,
+    .signup,
+    .socialmedia {
+        display: none;
+    }
+    
+}
+#gallery{
+    margin-top:15vh;
+    height:30vh;
+    padding:10vh;
+    height: 100%;
+    vertical-align: bottom;
+    text-align: center;
+
+    }
+
+
+.content .row .cell{
+    height:50vh;
+}
+
+.content .row .image{
+   
+    background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.content .row .text{
+
+    font-size:1.5vw;
+    align-items:center;
+    justify-content:center;
+    display: flex;
+    text-align: center;
+    font-weight:700;
+ 
+
+}
+.content .row .image1{
+    background-image: url("../IMG/together.jpg");
+}
+
+
+.content .row .image2{
+
+    background-image: url("../IMG/group.jpg");
+}
+
+
+.content .row .image3{
+    background-image: url("../IMG/cleanup.jpg");
+   
+}
+
+
+footer{
+    height:15vh;
+    margin: 0;
+    padding:10px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,255,24,1) 0%, rgba(37,203,215,1) 90% );
+    width:100vw;
+  
+  }
+  
+  footer .footer-box {
+    text-align: center;
+    margin: 0;
+    justify-items: space-around;
+    align-items:center;
+    padding:10px;
+    font-size: 1.5vw;
+    font-style: bold;
+  }
