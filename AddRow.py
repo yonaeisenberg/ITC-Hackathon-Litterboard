@@ -10,7 +10,7 @@ DB_FILENAME = 'Litterboard.db'
 def add_user(name=None, total_points=0, num_of_events=0):
     with sqlite3.connect(DB_FILENAME) as conn:
         if name is None:
-            name = request.args.get('name').capitali()
+            name = request.args.get('name').capitalize()
         sql = '''INSERT INTO users(full_name, total_points, num_of_events)
                   VALUES(?,?,?) '''
         cur = conn.cursor()
@@ -18,9 +18,10 @@ def add_user(name=None, total_points=0, num_of_events=0):
             cur.execute(sql, (name, total_points, num_of_events))
         except sqlite3.Error:
             return f'User {name} already exists.'
+        user_id = cur.lastrowid
         conn.commit()
         cur.close()
-    return f'User {name} was successfully added!'
+    return f'User {name} was successfully added! User id: {user_id}'
 
 
 @addrow_app.route('/add_location')
@@ -41,7 +42,7 @@ def add_location(name=None, days_since_last_event=-1, votes=0):
 
 
 @addrow_app.route('/add_event')
-def add_events(location=None, date=None, total_num_of_bags=0, num_of_participants=0):
+def add_event(location=None, date=None, total_num_of_bags=0, num_of_participants=0):
     with sqlite3.connect(DB_FILENAME) as conn:
         if location is None:
             location = request.args.get('location')
@@ -52,9 +53,11 @@ def add_events(location=None, date=None, total_num_of_bags=0, num_of_participant
                   VALUES(?, ?, ?, ?) '''
         cur = conn.cursor()
         try:
-            cur.execute(f'''SELECT id FROM locations where name={location}''')
+            cur.execute(f'''SELECT id FROM locations where name="{location}"''')
             location_id = cur.fetchall()[0][0]
         except KeyError:
+            return f"Location {location} does not exist."
+        except sqlite3.OperationalError:
             return f"Location {location} does not exist."
         cur.execute(sql, (location_id, date, total_num_of_bags, num_of_participants))
         event_id = cur.lastrowid
@@ -66,6 +69,10 @@ def add_events(location=None, date=None, total_num_of_bags=0, num_of_participant
 @addrow_app.route('/add_user_at_event')
 def add_user_at_event(user_id=None, event_id=None, points=0):
     with sqlite3.connect(DB_FILENAME) as conn:
+        if user_id is None:
+            user_id = request.args.get('user_id')
+        if event_id is None:
+            event_id = request.args.get('event_id')
         sql = ''' INSERT INTO user_at_event(user_id, event_id, points)
                   VALUES(?,?,?) '''
         cur = conn.cursor()
