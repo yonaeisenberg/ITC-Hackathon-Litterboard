@@ -1,4 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="06116888-9fe4-4117-b504-c85f20d0d860" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/react/src/components/eventRegistration.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/litterboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/litterboard.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/components/eventlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/components/eventlist.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1WkgUZxqjSlKiuadXTlHuefK8HI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="litterboard" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/helloworld/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06116888-9fe4-4117-b504-c85f20d0d860" name="Default Changelist" comment="" />
+      <created>1579710819647</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579710819647</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="357" y="21" key="#app" timestamp="1579712305001">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="357" y="21" key="#app/0.0.1280.800@0.0.1280.800" timestamp="1579712305000" />
+    <state x="100" y="100" width="1080" height="600" key="DiffContextDialog" timestamp="1579711501776">
+      <screen x="0" y="23" width="1280" height="710" />
+    </state>
+    <state x="100" y="100" width="1080" height="600" key="DiffContextDialog/0.0.1280.800@0.0.1280.800" timestamp="1579710942896" />
+    <state x="100" y="100" width="1080" height="600" key="DiffContextDialog/0.23.1280.710@0.23.1280.710" timestamp="1579711501776" />
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom" timestamp="1579714942941">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579714942941" />
+    <state width="1259" height="212" key="GridCell.Tab.0.center" timestamp="1579714942940">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579714942940" />
+    <state width="1259" height="212" key="GridCell.Tab.0.left" timestamp="1579714942939">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579714942939" />
+    <state width="1259" height="212" key="GridCell.Tab.0.right" timestamp="1579714942941">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579714942941" />
+    <state x="457" y="118" key="RollbackChangesDialog" timestamp="1579711067980">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="457" y="118" key="RollbackChangesDialog/0.0.1280.800@0.0.1280.800" timestamp="1579711067980" />
+    <state x="149" y="39" key="SettingsEditor" timestamp="1579712585272">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1579712585272" />
+    <state x="333" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1579710823476">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="333" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579710823476" />
+    <state x="287" y="198" key="git4idea.merge.GitPullDialog" timestamp="1579711080786">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="287" y="198" key="git4idea.merge.GitPullDialog/0.0.1280.800@0.0.1280.800" timestamp="1579711080786" />
+  </component>
 </project>
