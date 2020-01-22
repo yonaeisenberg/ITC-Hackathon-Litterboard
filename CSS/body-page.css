@@ -98,18 +98,18 @@ header .logo{
 
 }
 .content .row .image1{
-    background-image: url("../IMG/together.jpg");
+    background-image: url("../react/src/IMG/together.jpg");
 }
 
 
 .content .row .image2{
 
-    background-image: url("../IMG/group.jpg");
+    background-image: url("../react/src/IMG/group.jpg");
 }
 
 
 .content .row .image3{
-    background-image: url("../IMG/cleanup.jpg");
+    background-image: url("../react/src/IMG/cleanup.jpg");
    
 }
 
