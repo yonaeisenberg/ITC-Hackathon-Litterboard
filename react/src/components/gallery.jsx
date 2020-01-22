@@ -44,9 +44,6 @@
 //                     <i class="fa fa-bars"></i> </a>
 //             </header>
 
-
-
-
 //             <section class="content container">
 
 

@@ -11,7 +11,7 @@ import {
 import Home from "./components/home"
 import Gallery from "./components/gallery" 
 import AddUser from "./components/adduser" 
-import DisplayUser from "./components/displayuser"
+
 import UserList from "./components/userlist"
 import EventList from "./components/eventlist"
 
@@ -45,10 +45,6 @@ function App() {
           <Route exact path="/AddUser">
             <AddUser />
           </Route>
-          
-          <Route path="/DisplayUser">
-            <DisplayUser id={"id"}/>
-          </Route> 
           
           <Route exact path="/UserList">
             <UserList />

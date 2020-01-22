@@ -12,7 +12,7 @@ class Home extends React.Component{
   componentDidMount() {
    FetchBoard().then(response => {
         this.setState({
-            dat: response.data.students
+            dat: response.data
         })
     })
    }
@@ -21,7 +21,7 @@ class Home extends React.Component{
     return(
         <div>
         <h1>home placeholder</h1>
-        <p> {console.log(this.state.dat)} </p>
+        <p> {this.state.dat} </p>
         </div>
     )
     }

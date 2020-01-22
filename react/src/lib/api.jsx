@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const Url = "http://127.0.0.1:5000";
+const Url = "http://127.0.0.1:7000";
 
 export function FetchBoard() {
     
