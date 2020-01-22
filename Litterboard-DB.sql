@@ -4,6 +4,7 @@ CREATE TABLE `events` (
   `date` datetime,
   `total_num_of_bags` INTEGER,
   `num_of_participants` INTEGER,
+  UNIQUE(location_id,date),
   CONSTRAINT `events_fk` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`)
 );
 
