@@ -17,6 +17,7 @@ with sqlite3.connect(DB_FILENAME) as con:
                             WHERE l.id = e.location_id
                             ORDER by e.id''', con)
 
+
 class Place:
     def __init__(self, key, name, point):
         self.key = key
@@ -27,9 +28,9 @@ class Place:
 
 
 places = ()
-for i,j in zip(df_place.Name, df_place.Total):
+for i, j in zip(df_place.Name, df_place.Total):
     try:
-        places = places + (Place(i[:3].lower(), i+', Tel Aviv, Israel', int(j)),)
+        places = places + (Place(i[:3].lower(), i + ', Tel Aviv, Israel', int(j)),)
     except:
         pass
 places_by_key = {place.key: place for place in places}
