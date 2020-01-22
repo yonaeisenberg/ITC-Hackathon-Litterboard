@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import './App.css';
 import {
@@ -14,22 +13,16 @@ import AddUser from "./components/adduser"
 
 import UserList from "./components/userlist"
 import EventList from "./components/eventlist"
+import Galleryheader from "./components/galleryheader"
 
 
 
 function App() {
   return (
     <div className="App">
-
+        <Galleryheader />
       <Router >
-        <div >
-         <Link to="/" > Home/  </Link> 
-         <Link to="/Gallery"> Gallery/ </Link> 
-         <Link to="/AddUser"> Register Here/ </Link> 
-         <Link to="/DisplayUser"> Show a specific / </Link> 
-        <Link to="/UserList"> Show List/  </Link>
-        <Link to="/EventList">   Vote for event/ </Link>
-        <Link to="/NameForm"> Registration (?) </Link> 
+        <div>
         
         </div>
         <Switch>

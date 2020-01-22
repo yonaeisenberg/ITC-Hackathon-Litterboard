@@ -1,28 +1,8 @@
 
-html,
-body {
-min-height: 100vh;
-width:100%;
-position: relative;
-color:black;
-background-color:white;
-font-family: 'IBM Plex Mono', monospace;
-}
 
-header{
-    display:flex;
-    justify-content: space-between;
-    align-items:space;
-    padding:0px;
-    color:black;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,255,24,1) 0%, rgba(37,203,215,1) 90% );    text-decoration: none;
-    z-index:1020 ;
-    overflow: hidden;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-  
-}
+
+
+
 
 header a{
     text-decoration: none;
@@ -114,7 +94,7 @@ header .logo{
 }
 
 
-footer{
+.Footer{
     height:15vh;
     margin: 0;
     padding:10px;
