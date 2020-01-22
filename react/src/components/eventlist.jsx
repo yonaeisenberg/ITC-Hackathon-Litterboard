@@ -1,10 +1,9 @@
 import React from 'react'
 import  { Table } from 'react-bootstrap';
 
-
 function EventList()
  {
-  
+
     return (
         <div>
         <Table striped bordered hover variant="dark">
