@@ -14,6 +14,7 @@ import AddUser from "./components/adduser"
 import DisplayUser from "./components/displayuser"
 import UserList from "./components/userlist"
 import EventList from "./components/eventlist"
+import NameForm from ".components/AddUserForm"
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
          <Link to="/DisplayUser"> Show a specific / </Link> 
         <Link to="/UserList"> Show List/  </Link>
         <Link to="/EventList">   Vote for event/ </Link>
+        <Link to="/NameForm"> Registration (?) </Link> 
+        
         </div>
         <Switch>
 
