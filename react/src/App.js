@@ -14,8 +14,7 @@ import AddUser from "./components/adduser"
 
 import UserList from "./components/userlist"
 import EventList from "./components/eventlist"
-
-
+import EventRegistration from "./components/EventRegistration"
 
 function App() {
   return (
@@ -29,7 +28,7 @@ function App() {
          <Link to="/DisplayUser"> Show a specific / </Link> 
         <Link to="/UserList"> Show List/  </Link>
         <Link to="/EventList">   Vote for event/ </Link>
-        <Link to="/NameForm"> Registration (?) </Link> 
+        <Link to="/EventRegistration"> Event Registration </Link> 
         
         </div>
         <Switch>
@@ -53,9 +52,13 @@ function App() {
           <Route exact path="/EventList">
             <EventList />
           </Route>
+
+          <Route exact path="/EventRegistration">
+          <EventRegistration />
+        </Route>
+
         </Switch>
       </Router>
-
     </div>
   );
 }
