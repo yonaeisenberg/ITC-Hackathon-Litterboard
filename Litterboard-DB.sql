@@ -11,7 +11,8 @@ CREATE TABLE `users` (
   `id` INTEGER PRIMARY KEY AUTOINCREMENT,
   `full_name` CHAR(255),
   `total_points` INTEGER,
-  `num_of_events` INTEGER
+  `num_of_events` INTEGER,
+  UNIQUE(full_name)
 );
 
 CREATE TABLE `user_at_event` (
@@ -27,7 +28,8 @@ CREATE TABLE `locations` (
   `id` INTEGER PRIMARY KEY AUTOINCREMENT,
   `name` CHAR(255),
   `days_since_last_event` INTEGER,
-  `votes` INTEGER
+  `votes` INTEGER,
+  UNIQUE(name)
 );
 
 
