@@ -1,5 +1,4 @@
-from flask import Blueprint, request, render_template, session, redirect
-import numpy as np
+from flask import Blueprint, request
 import pandas as pd
 import sqlite3
 
@@ -21,7 +20,7 @@ def fetch_board(type):
                             FROM users JOIN user_at_event ON users.id = user_at_event.user_id 
                             WHERE user_at_event.event_id = {event_id} order by points DESC''', con)
             df.index = range(1, len(df) + 1)
-    return render_template('general_board.html', tables=[df.to_html(classes='data', header=True)])
+    return df.T.to_json()
 
 
 if __name__ == '__main__':

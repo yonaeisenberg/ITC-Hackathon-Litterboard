@@ -1,8 +1,8 @@
 import React from "react"
-import { FetchBoard } from "../lib/api"
+import { FetchLocations, Vote } from "../lib/api"
 import { Table } from 'react-bootstrap'
 
-class Home extends React.Component{
+class VoteList extends React.Component{
   constructor(props){
       super(props);
     this.state = {
@@ -11,7 +11,15 @@ class Home extends React.Component{
   }
 
   componentDidMount() {
-   FetchBoard().then(response => {
+   FetchLocations().then(response => {
+        this.setState({
+            dat: response.data
+        })
+    })
+   }
+
+   vote(location_id)   {
+   Vote(location_id).then(response => {
         this.setState({
             dat: response.data
         })
@@ -23,7 +31,7 @@ class Home extends React.Component{
     const lines=Object.values(this.state.dat)
     return(
          <div>
-             <h1>Welcome to Litterboard!</h1>
+             <h1>Vote for a location for our next event!</h1>
              <p align="center">
                  <Table striped bordered hovered>
                      <thead>
@@ -31,7 +39,7 @@ class Home extends React.Component{
                              <th>#</th>
                                  {
                                     lines.slice(0,1).map(line => { return(
-                                        Object.keys(line).map(header => {
+                                        Object.keys(line).slice(0,-1).map(header => {
                                               return (
                                                   <th>
                                                       {header}
@@ -40,13 +48,14 @@ class Home extends React.Component{
                                         }))
                                     })
                                  }
+                              <th></th>
                            </tr>
                      </thead>
                      <tbody>
                             {lines.map((line, index) => { return(
                                 <tr>
                                     <th>{ranks[index]}</th>
-                                    {Object.values(line).map(value => {
+                                    {Object.values(line).slice(0,-1).map(value => {
                                               return (
                                                   <th>
                                                       {value}
@@ -54,6 +63,7 @@ class Home extends React.Component{
                                               )
                                         })
                                      }
+                                     <th><button onClick={(event) => { event.preventDefault(); this.vote(Object.values(line).slice(-1))}}> + </button></th>
                                 </tr>
                                 )}
                             )}
@@ -67,4 +77,4 @@ class Home extends React.Component{
 
 }
 
-export default Home
+export default VoteList
