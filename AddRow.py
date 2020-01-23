@@ -67,22 +67,32 @@ def add_event(location=None, date=None, total_num_of_bags=0, num_of_participants
 
 
 @addrow_app.route('/add_user_at_event')
-def add_user_at_event(user_id=None, event_id=None, points=0):
+def add_user_at_event(user_name=None, event_id=None, points=0):
     with sqlite3.connect(DB_FILENAME) as conn:
-        if user_id is None:
-            user_id = request.args.get('user_id')
+        if user_name is None:
+            user_name = request.args.get('user_name')
         if event_id is None:
             event_id = request.args.get('event_id')
         sql = ''' INSERT INTO user_at_event(user_id, event_id, points)
                   VALUES(?,?,?) '''
         cur = conn.cursor()
-        cur.execute(sql, (user_id, event_id, points))
+        try:
+            cur.execute(f'''SELECT id from users where full_name="{user_name}"''')
+            user_id = cur.fetchall()[0][0]
+        except:
+            cur.close()
+            return f"User {user_name} does not exit, please register first at 'Register Here'"
+        try:
+            cur.execute(sql, (user_id, event_id, points))
+        except:
+            cur.close()
+            return f"User {user_name} is already registered to this event!"
         cur.execute(f'''UPDATE events 
                         SET num_of_participants = num_of_participants + 1 
                         WHERE id={event_id}''')
         conn.commit()
         cur.close()
-    return f'User {user_id} successfully registered to event {event_id}'
+    return f'User {user_name} successfully registered to the event! Enjoy cleaning the world with us :)'
 
 
 def main():

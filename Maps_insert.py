@@ -10,7 +10,7 @@ DB_FILENAME = 'Litterboard.db'
 
 place_app = Blueprint('Maps_insert', __name__)
 
-locator = geopy.Nominatim(user_agent='myGeocoder', timeout=3)
+locator = geopy.Nominatim(user_agent='myGeocoder', timeout=10)
 
 
 class Place:

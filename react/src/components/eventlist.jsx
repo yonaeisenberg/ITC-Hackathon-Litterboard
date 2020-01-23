@@ -1,6 +1,13 @@
 import React from "react"
 import { FetchEvents } from "../lib/api"
 import { Table } from 'react-bootstrap'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+  } from "react-router-dom";
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 
 class EventList extends React.Component{
   constructor(props){
@@ -31,7 +38,7 @@ class EventList extends React.Component{
                              <th>#</th>
                                  {
                                     lines.slice(0,1).map(line => { return(
-                                        Object.keys(line).slice(0,-1).map(header => {
+                                        Object.keys(line).slice(0,-2).map(header => {
                                               return (
                                                   <th>
                                                       {header}
@@ -56,7 +63,7 @@ class EventList extends React.Component{
                                               )
                                         })
                                     }
-                                    {Object.values(line).slice(1,-1).map(value => {
+                                    {Object.values(line).slice(1,-2).map(value => {
                                               return (
                                                   <th>
                                                       {value}
@@ -64,6 +71,9 @@ class EventList extends React.Component{
                                               )
                                         })
                                      }
+                                     <th>
+                                        <Nav.Link href={"/RegisterToEvent?event_id="+Object.values(line).slice(-2,-1)}>Register to Event</Nav.Link>
+                                     </th>
                                 </tr>
                                 )}
                             )}
