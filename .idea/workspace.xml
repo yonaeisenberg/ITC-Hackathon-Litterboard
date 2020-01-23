@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="06116888-9fe4-4117-b504-c85f20d0d860" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maps_insert.py" beforeDir="false" afterPath="$PROJECT_DIR$/Maps_insert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Litterboard.db" beforeDir="false" afterPath="$PROJECT_DIR$/Litterboard.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,9 +148,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="333" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579710823476" />
-    <state x="287" y="198" key="git4idea.merge.GitPullDialog" timestamp="1579711080786">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="344" y="214" key="git4idea.merge.GitPullDialog" timestamp="1579777331859">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="287" y="198" key="git4idea.merge.GitPullDialog/0.0.1280.800@0.0.1280.800" timestamp="1579711080786" />
+    <state x="344" y="214" key="git4idea.merge.GitPullDialog/0.0.1536.864@0.0.1536.864" timestamp="1579777331859" />
   </component>
 </project>
