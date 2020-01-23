@@ -10,7 +10,7 @@ DB_FILENAME = 'Litterboard.db'
 
 place_app = Blueprint('Maps_insert', __name__)
 
-locator = geopy.Nominatim(user_agent='myGeocoder', timeout=10)
+locator = geopy.Nominatim(user_agent='myGeocoder', timeout=15)
 
 
 class Place:
@@ -34,9 +34,11 @@ with sqlite3.connect(DB_FILENAME) as con:
 df_place.fillna(1, inplace=True)
 places = []
 for i in range(len(df_place)):
-    places.append(Place(df_place.loc[i, 'location_id'], df_place.loc[i, 'Name'] + ', Tel Aviv, Israel',
+    try:
+        places.append(Place(df_place.loc[i, 'location_id'], df_place.loc[i, 'Name'] + ', Tel Aviv, Israel',
                             int(df_place.loc[i, 'Total'])))
-
+    except:
+        pass
 
 places_by_id = {place.id: place for place in places}
 

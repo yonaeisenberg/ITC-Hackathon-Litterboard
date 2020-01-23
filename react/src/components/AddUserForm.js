@@ -1,16 +1,6 @@
 import React from 'react'
 import { findRenderedComponentWithType } from 'react-dom/test-utils';
 
-
-const formStyle = {
-    fontSize: '15px',
-    textAlign: 'center',
-    height:'100px',
-    width:'50vh',
-    backgroundColor:'white',
-    borderRadius:'5px'
-  };
-
 export default class NameForm extends React.Component {
     constructor(props) {
       super(props);
@@ -30,11 +20,11 @@ export default class NameForm extends React.Component {
     }
 
 
-      
-  
+    
     render() {
       return (
-         <div style = {formStyle}>
+        <div>
+        <div style ={{borderRadius:'solid 1px black',width:'80vw',  margin: 'auto', width: '70%', border: '3px solid white',padding: '10px', backgroundColor:'white', marginTop:'50px'}}>
         <form onSubmit={this.handleSubmit}>
           <label>
             Enter your first name and last name:
@@ -42,6 +32,7 @@ export default class NameForm extends React.Component {
           </label>
           <input type="submit" value="Submit" />
         </form>
+        </div>
         </div>
    
       );
