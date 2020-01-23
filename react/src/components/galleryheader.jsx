@@ -34,7 +34,6 @@ class Galleryheader extends React.Component {
 
       <Nav.Link href="/AddUser">Register Here</Nav.Link>
       <Nav.Link href="/EventList">Our events</Nav.Link>
-      <Nav.Link href="/UserList">Show List </Nav.Link>
       <Nav.Link href="/VoteList">Vote for location</Nav.Link>
 
 

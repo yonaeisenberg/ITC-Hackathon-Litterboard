@@ -22,6 +22,14 @@ export function Vote(location_id){
 export function addUser(name){
     return axios.get(`${Url}/add_user?name=`+name)
 }
+
+export function addUserAtEvent(user_name,event_id){
+    return axios.get(`${Url}/add_user_at_event?user_name=${user_name}&event_id=${event_id}`)
+}
+
+export function FetchEventInfo(event_id){
+    return axios.get(`${Url}/FetchEventInfo?event_id=${event_id}`)
+}
 // export function GetStudentList() {
 
 //     return axios.get(`${Url}/getlist`);
