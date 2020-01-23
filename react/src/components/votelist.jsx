@@ -55,10 +55,20 @@ class VoteList extends React.Component{
                             {lines.map((line, index) => { return(
                                 <tr>
                                     <th>{ranks[index]}</th>
-                                    {Object.values(line).slice(0,-1).map(value => {
+                                    {Array.from(Object.values(line).slice(0,1)).map(value => {
                                               return (
                                                   <th>
-                                                      {value}
+                                                        <a style={{display: "table-cell"}} target="_blank" href={'http://127.0.0.1:7000/place?location_id='+Object.values(line).slice(-1)}>
+                                                            {value}
+                                                        </a>
+                                                  </th>
+                                              )
+                                        })
+                                    }
+                                    {Object.values(line).slice(1,-1).map(value => {
+                                              return (
+                                                  <th>
+                                                    {value}
                                                   </th>
                                               )
                                         })
