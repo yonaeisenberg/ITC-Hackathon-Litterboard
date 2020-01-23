@@ -13,7 +13,7 @@ class EventList extends React.Component{
   constructor(props){
       super(props);
     this.state = {
-        dat:""
+        dat:"", future: 'true'
     }
   }
 
@@ -38,7 +38,7 @@ class EventList extends React.Component{
                              <th>#</th>
                                  {
                                     lines.slice(0,1).map(line => { return(
-                                        Object.keys(line).slice(0,-2).map(header => {
+                                        Object.keys(line).slice(0,-3).map(header => {
                                               return (
                                                   <th>
                                                       {header}
@@ -56,14 +56,14 @@ class EventList extends React.Component{
                                     {Array.from(Object.values(line).slice(0,1)).map(value => {
                                               return (
                                                   <th>
-                                                        <a style={{display: "table-cell"}} target="_blank" href={'http://127.0.0.1:7000/place?location_id='+Object.values(line).slice(-1)}>
+                                                        <a style={{display: "table-cell"}} target="_blank" href={'http://127.0.0.1:7000/place?location_id='+Object.values(line).slice(-2,-1)}>
                                                             {value}
                                                         </a>
                                                   </th>
                                               )
                                         })
                                     }
-                                    {Object.values(line).slice(1,-2).map(value => {
+                                    {Object.values(line).slice(1,-3).map(value => {
                                               return (
                                                   <th>
                                                       {value}
@@ -72,7 +72,7 @@ class EventList extends React.Component{
                                         })
                                      }
                                      <th>
-                                        <Nav.Link href={"/RegisterToEvent?event_id="+Object.values(line).slice(-2,-1)}>Register to Event</Nav.Link>
+                                      { (Object.values(line).slice(-1)[0]) ? <Nav.Link href={"/RegisterToEvent?event_id="+Object.values(line).slice(-3,-2)}>Register to Event</Nav.Link> : <Nav.Link href={"/RegisterToEvent?event_id="+Object.values(line).slice(-3,-2)}>View Event</Nav.Link>}
                                      </th>
                                 </tr>
                                 )}

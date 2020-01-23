@@ -21,7 +21,7 @@ def add_user(name=None, total_points=0, num_of_events=0):
         user_id = cur.lastrowid
         conn.commit()
         cur.close()
-    return f'User {name} was successfully added! User id: {user_id}'
+    return f'Welcome {name}, you successfully registered! Enjoy cleaning the world with us :)'
 
 
 @addrow_app.route('/add_location')
@@ -63,7 +63,7 @@ def add_event(location=None, date=None, total_num_of_bags=0, num_of_participants
         event_id = cur.lastrowid
         conn.commit()
         cur.close()
-    return f'A new event at "{location}" on date "{date}" was successfully added! Event id: {event_id}'
+    return f'A new event at "{location}" on date "{date}" was successfully added!'
 
 
 @addrow_app.route('/add_user_at_event')

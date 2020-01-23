@@ -1,6 +1,7 @@
 from flask import Blueprint, request
 import sqlite3
 import pandas as pd
+import datetime as dt
 
 eventlist_app = Blueprint('EventList', __name__)
 DB_FILENAME = 'Litterboard.db'
@@ -14,6 +15,8 @@ def event_list():
         from events join locations on events.location_id = locations.id
         order by Date DESC''', con)
     df.index = range(1, len(df) + 1)
+    df['IsFuture'] = df.Date.apply(lambda x: x > dt.datetime.today().strftime('%Y-%m-%d'))
+    print(df.loc[df['IsFuture'],'event_id'].values)
     return df.T.to_json()
 
 
