@@ -16,7 +16,7 @@ import EventList from "./components/eventlist"
 import VoteList from "./components/votelist"
 
 import Galleryheader from "./components/galleryheader"
-import EventRegistration from "./components/eventRegistration"
+import EventRegistration from "./components/EventRegistration"
 
 
 function App() {
