@@ -3,6 +3,7 @@ import geopy
 from flask import Flask, render_template, abort, Blueprint, request
 import pandas as pd
 import sqlite3
+import urllib
 
 DB_FILENAME = 'Litterboard.db'
 # app = Flask(__name__)
@@ -26,14 +27,18 @@ class Place:
 #     return render_template('list_of_place.html', places=places)
 with sqlite3.connect(DB_FILENAME) as con:
     df_place = pd.read_sql('''SELECT l.id as location_id, l.name as Name , max(e.total_num_of_bags) as Total
-                            FROM locations as l join events as e 
+                            FROM locations as l left outer join events as e 
                             on l.id = e.location_id
                             group by l.id
                             ''', con)
+df_place.fillna(1, inplace=True)
 places = []
 for i in range(len(df_place)):
-    places.append(Place(df_place.loc[i, 'location_id'], df_place.loc[i, 'Name'] + ', Tel Aviv, Israel',
-                        int(df_place.loc[i, 'Total'])))
+    try:
+        places.append(Place(df_place.loc[i, 'location_id'], df_place.loc[i, 'Name'] + ', Tel Aviv, Israel',
+                            int(df_place.loc[i, 'Total'])))
+    except urllib.error.URLError:
+        pass
 
 places_by_id = {place.id: place for place in places}
 
