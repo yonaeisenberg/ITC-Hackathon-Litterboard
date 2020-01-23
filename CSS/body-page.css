@@ -105,6 +105,10 @@ header .logo{
   
   }
   
+  .row{
+      border-radius: 25px;
+  }
+
   footer .footer-box {
     text-align: center;
     margin: 0;

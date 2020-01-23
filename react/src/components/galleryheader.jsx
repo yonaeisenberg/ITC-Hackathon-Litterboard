@@ -30,7 +30,7 @@ class Galleryheader extends React.Component {
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
       <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="/Gallery">Gallery</Nav.Link>
+      <Nav.Link href="/Gallery">About us</Nav.Link>
 
       <Nav.Link href="/AddUser">Register Here</Nav.Link>
       <Nav.Link href="/EventList">Our events</Nav.Link>

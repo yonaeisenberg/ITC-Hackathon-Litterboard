@@ -12,14 +12,14 @@ class Content extends React.Component {
  <div style={{height:'30vh', padding:'10vh', verticalAlign: 'bottom',textAlign: 'center'}}>
    
  <h1>
-     Gallery
+     About us
 
  </h1>
 
  </div>
 
 
-<article className="row shadow p-3 mb-5 bg-light">
+<article className="row shadow p-3 mb-5 bg-light" style= {{borderRadius:'25px'}}>
 <div className="cell text col-sm-12 col-lg-6 col-md-6">​
 5.3 million tons of waste is generated in Israel each year.
 30% of the waste generated annually is biodegradable. 
@@ -30,7 +30,7 @@ landfills; only about 25% is recycled.</div>
 </article>
 
 
-<article className="reverse row shadow p-3 mb-5 bg-light">
+<article className="reverse row shadow p-3 mb-5 bg-light" style= {{borderRadius:'25px'}}>
 <div className="cell text col-sm-12 col-lg-6 col-md-6"> 
 Litterboard is taking action in  shaping Israeli <br/> waste management towards reducing the amount <br/>of trash landfilled, greatly increased recycling and joint efforts </div>
 
@@ -38,7 +38,7 @@ Litterboard is taking action in  shaping Israeli <br/> waste management towards 
 </article>
 
 
-<article className="row shadow p-3 mb-5 bg-light">
+<article className="row shadow p-3 mb-5 bg-light" style= {{borderRadius:'25px'}}>
 <div className="cell text col-sm-12 col-lg-6 col-md-6">
 A literal TON of trash removed per event. Litterboard is leading by 
 example and inspiring others. All the thanks go to our awesome participants 

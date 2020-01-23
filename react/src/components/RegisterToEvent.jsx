@@ -50,7 +50,7 @@ const formStyle = {
 
     render() {
       return (
-        <div className="regtoevent" style ={{borderRadius:'solid 1px black',width:'80vw',  margin: 'auto', width: '70%', border: '3px solid white',padding: '10px', backgroundColor:'white', marginTop:'50px'}}>
+        <div className="regtoevent" style ={{borderRadius:'30px',width:'80vw',  margin: 'auto', width: '70%', border: '3px solid white',padding: '10px', backgroundColor:'white', marginTop:'50px'}}>
 
          <p></p>
         <form onSubmit={this.handleSubmit}>
@@ -63,6 +63,7 @@ const formStyle = {
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
           <p></p>
+          <a style= {{marginRight:'30px',color:'grey'}} href="http://localhost:3000/EventList">Back</a>
           <input type="submit" value="Submit" disabled={!this.state.value}/>
         </form>
         <p></p>

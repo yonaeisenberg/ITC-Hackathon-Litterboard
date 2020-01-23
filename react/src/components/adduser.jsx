@@ -38,6 +38,7 @@ import { addUser } from '../lib/api'
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
           <p></p>
+          <a style= {{marginRight:'30px',color:'grey'}} href="http://localhost:3000">Back</a>
           <input type="submit" value="Submit" disabled={!this.state.value}/>
         </form>
         <p></p>
