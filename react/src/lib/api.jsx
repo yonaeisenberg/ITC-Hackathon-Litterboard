@@ -4,10 +4,20 @@ import axios from 'axios';
 const Url = "http://127.0.0.1:7000";
 
 export function FetchBoard() {
-    
     return axios.get(`${Url}/board/general`);
 }
 
+export function FetchLocations(){
+    return axios.get(`${Url}/fetch_locations`)
+}
+
+export function Vote(location_id){
+    return axios.get(`${Url}/vote?location_id=`+location_id)
+}
+
+export function addUser(name){
+    return axios.get(`${Url}/add_user?name=`+name)
+}
 // export function GetStudentList() {
 
 //     return axios.get(`${Url}/getlist`);

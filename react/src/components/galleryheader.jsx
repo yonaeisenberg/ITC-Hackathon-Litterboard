@@ -11,6 +11,7 @@ import {
   import AddUser from "./adduser" 
   import UserList from "./userlist"
   import EventList from "./eventlist"
+  import VoteList from "./votelist"
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 
 
@@ -28,12 +29,13 @@ class Galleryheader extends React.Component {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
+      <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link href="/Gallery">Gallery</Nav.Link>
 
-      <Nav.Link href="/AddUser">Register Here </Nav.Link>
-      <Nav.Link href="/DisplayUser">Show a specific</Nav.Link>
+      <Nav.Link href="/AddUser">Register Here</Nav.Link>
+      <Nav.Link href="/EventList">Our events</Nav.Link>
       <Nav.Link href="/UserList">Show List </Nav.Link>
-      <Nav.Link href="/EventList">Vote for event</Nav.Link>
+      <Nav.Link href="/VoteList">Vote for location</Nav.Link>
 
 
     </Nav>

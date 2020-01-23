@@ -13,6 +13,7 @@ import AddUser from "./components/adduser"
 
 import UserList from "./components/userlist"
 import EventList from "./components/eventlist"
+import VoteList from "./components/votelist"
 
 import Galleryheader from "./components/galleryheader"
 import EventRegistration from "./components/eventRegistration"
@@ -23,16 +24,6 @@ function App() {
     <div className="App">
         <Galleryheader />
       <Router >
-        <div>
-         <Link to="/" > Home/  </Link> 
-         <Link to="/Gallery"> Gallery/ </Link> 
-         <Link to="/AddUser"> Register Here/ </Link> 
-         <Link to="/DisplayUser"> Show a specific / </Link> 
-        <Link to="/UserList"> Show List/  </Link>
-        <Link to="/EventList">   Vote for event/ </Link>
-        <Link to="/EventRegistration"> Event Registration </Link> 
-        
-        </div>
         <Switch>
 
            <Route exact path="/">
@@ -53,6 +44,10 @@ function App() {
           
           <Route exact path="/EventList">
             <EventList />
+          </Route>
+
+           <Route exact path="/VoteList">
+            <VoteList />
           </Route>
 
           <Route exact path="/EventRegistration">

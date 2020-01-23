@@ -9,7 +9,7 @@ class Content extends React.Component {
     
  <section className="content container">
 
- <div style={{height:'30vh', padding:'10vh',height: '100%', verticalAlign: 'bottom',textAlign: 'center'}}>
+ <div style={{height:'30vh', padding:'10vh', verticalAlign: 'bottom',textAlign: 'center'}}>
    
  <h1>
      Gallery

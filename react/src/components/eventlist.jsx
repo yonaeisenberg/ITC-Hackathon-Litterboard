@@ -6,7 +6,7 @@ function EventList()
 
     return (
         <div>
-        <Table striped bordered hover variant="dark">
+        <Table striped bordered hovered>
         <thead>
           <tr>
             <th>#</th>
