@@ -23,7 +23,7 @@ class Home extends React.Component{
     const ranks=Object.keys(this.state.dat)
     const lines=Object.values(this.state.dat)
     return(
-         <div style ={{width:'80vw',  margin: 'auto', width: '50%', border: '3px solid white',padding: '10px', backgroundColor:'white', marginTop:'50px', borderRadius:'30px'}}>
+         <div className ="home" style ={{width:'80vw',  margin: 'auto', width: '50%', border: '3px solid white',padding: '10px', backgroundColor:'white', marginTop:'50px', borderRadius:'30px'}}>
              <h1>Welcome to Litterboard!</h1>
              <p align="center">
                  <Table>

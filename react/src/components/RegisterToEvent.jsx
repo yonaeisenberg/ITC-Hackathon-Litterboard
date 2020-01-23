@@ -50,7 +50,8 @@ const formStyle = {
 
     render() {
       return (
-         <div style = {formStyle} align='right'>
+        <div className="regtoevent" style ={{borderRadius:'solid 1px black',width:'80vw',  margin: 'auto', width: '70%', border: '3px solid white',padding: '10px', backgroundColor:'white', marginTop:'50px'}}>
+
          <p></p>
         <form onSubmit={this.handleSubmit}>
             <p>

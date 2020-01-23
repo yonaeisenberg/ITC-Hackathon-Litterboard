@@ -2,13 +2,6 @@ import React from 'react'
 import { addUser } from '../lib/api'
 
 
-const formStyle = {
-    fontSize: '15px',
-    textAlign: 'center',
-    height:'100px',
-    width:'50vh',
-    borderRadius:'5px'
-  };
 
 
  class AddUser extends React.Component {
@@ -33,10 +26,10 @@ const formStyle = {
       this.setState({value: ''});
     }
 
-
     render() {
       return (
-         <div style = {formStyle} align='right'>
+        <div style ={{margin: 'auto', width: '40%', border: '3px solid white',borderRadius:'30px',padding: '10px', marginTop:'170px'}}>
+
          <p></p>
         <form onSubmit={this.handleSubmit}>
           <label>
