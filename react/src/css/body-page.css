@@ -1,9 +1,20 @@
+
+
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+
+
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,255,24,1) 0%, rgba(37,203,215,1) 90% );    text-decoration: none;
+}
+
+
+
 .Gallery{
 min-height: 100vh;
 width:100%;
 position: relative;
 color:black;
-background-color:white;
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,255,24,1) 0%, rgba(37,203,215,1) 90% );    text-decoration: none;
 font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -20,6 +31,10 @@ font-family: 'IBM Plex Mono', monospace;
     top: 0; 
     width: 100%; 
   
+}
+
+.Content{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,255,24,1) 0%, rgba(37,203,215,1) 90% );    text-decoration: none;
 }
 
 header a{

@@ -2,6 +2,8 @@
   text-align: center;
   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,255,24,1) 0%, rgba(37,203,215,1) 90% );    text-decoration: none;
   height:100vh;
+  font-family: 'Ubuntu', sans-serif;
+ 
 }
 
 
