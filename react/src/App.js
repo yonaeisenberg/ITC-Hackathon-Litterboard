@@ -19,6 +19,7 @@ import VoteList from "./components/votelist"
 import Galleryheader from "./components/galleryheader"
 import EventRegistration from "./components/EventRegistration"
 import RegisterToEvent from "./components/RegisterToEvent"
+import ViewEvent from "./components/ViewEvent"
 
 
 function App() {
@@ -60,6 +61,9 @@ function App() {
           <RegisterToEvent />
         </Route>
 
+        <Route exact path="/ViewEvent">
+          <ViewEvent />
+        </Route>
         </Switch>
       </Router>
    

@@ -7,6 +7,10 @@ export function FetchBoard() {
     return axios.get(`${Url}/board/general`);
 }
 
+export function FetchEventBoard(id) {
+    return axios.get(`${Url}/board/event?id=`+id)
+}
+
 export function FetchLocations(){
     return axios.get(`${Url}/fetch_locations`)
 }

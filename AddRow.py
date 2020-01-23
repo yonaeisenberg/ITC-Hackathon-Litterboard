@@ -60,7 +60,6 @@ def add_event(location=None, date=None, total_num_of_bags=0, num_of_participants
         except sqlite3.OperationalError:
             return f"Location {location} does not exist."
         cur.execute(sql, (location_id, date, total_num_of_bags, num_of_participants))
-        event_id = cur.lastrowid
         conn.commit()
         cur.close()
     return f'A new event at "{location}" on date "{date}" was successfully added!'

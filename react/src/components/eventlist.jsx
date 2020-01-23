@@ -72,7 +72,7 @@ class EventList extends React.Component{
                                         })
                                      }
                                      <th>
-                                      { (Object.values(line).slice(-1)[0]) ? <Nav.Link href={"/RegisterToEvent?event_id="+Object.values(line).slice(-3,-2)}>Register to Event</Nav.Link> : <Nav.Link href={"/RegisterToEvent?event_id="+Object.values(line).slice(-3,-2)}>View Event</Nav.Link>}
+                                      { (Object.values(line).slice(-1)[0]) ? <Nav.Link href={"/RegisterToEvent?event_id="+Object.values(line).slice(-3,-2)}>Register to Event</Nav.Link> : <Nav.Link href={"/ViewEvent?event_id="+Object.values(line).slice(-3,-2)}>View Event</Nav.Link>}
                                      </th>
                                 </tr>
                                 )}
