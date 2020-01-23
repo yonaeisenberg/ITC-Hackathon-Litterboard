@@ -11,6 +11,10 @@ export function FetchLocations(){
     return axios.get(`${Url}/fetch_locations`)
 }
 
+export function FetchEvents(){
+    return axios.get(`${Url}/EventList`)
+}
+
 export function Vote(location_id){
     return axios.get(`${Url}/vote?location_id=`+location_id)
 }
